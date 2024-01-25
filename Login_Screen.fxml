@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<!-- For this line in the" fx:controller= " attribute I added my own package so that it can run on my IDE named " com.example.mergingPages  " -->
+
+<VBox fx:id="mainV" prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mergingpages.TattooSchedulerController">
+
+    <children>
+        <MenuBar VBox.vgrow="NEVER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="New" />
+                        <MenuItem mnemonicParsing="false" text="Open…" />
+                        <Menu mnemonicParsing="false" text="Open Recent" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                        <MenuItem mnemonicParsing="false" text="Save" />
+                        <MenuItem mnemonicParsing="false" text="Save As…" />
+                        <MenuItem mnemonicParsing="false" text="Revert" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Preferences…" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Quit" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Undo" />
+                        <MenuItem mnemonicParsing="false" text="Redo" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Cut" />
+                        <MenuItem mnemonicParsing="false" text="Copy" />
+                        <MenuItem mnemonicParsing="false" text="Paste" />
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Select All" />
+                        <MenuItem mnemonicParsing="false" text="Unselect All" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <AnchorPane fx:id="mainAnchor" maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: #9eacba;" VBox.vgrow="ALWAYS">
+            <children>
+                <Pane prefHeight="375.0" prefWidth="197.0" style="-fx-background-color: #001224;">
+                    <children>
+                        <Label layoutX="22.0" layoutY="89.0" text="Tattoo" textFill="#9aabbc">
+                            <font>
+                                <Font name="System Italic" size="55.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="57.0" layoutY="143.0" text="Scheduling App" textFill="#958dc0">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="143.0" layoutY="307.0" text="CSC605" textFill="#b1cad9">
+                            <font>
+                                <Font name="Calibri" size="12.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="87.0" layoutY="321.0" text="Christian Dela Rosa" textFill="#6da9ce">
+                            <font>
+                                <Font name="Calibri" size="12.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="111.0" layoutY="334.0" text="Randy Ganzon" textFill="#6da9ce">
+                            <font>
+                                <Font name="Calibri" size="12.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="117.0" layoutY="348.0" text="Juan Salgado" textFill="#6da9ce">
+                            <font>
+                                <Font name="Calibri" size="12.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+                <Label layoutX="383.0" layoutY="204.0" text="Enter the Portal" textFill="WHITE">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="userNameTextField" layoutX="383.0" layoutY="231.0" prefHeight="27.0" prefWidth="197.0" />
+                <TextField fx:id="userPasswordTextField" layoutX="383.0" layoutY="271.0" prefHeight="27.0" prefWidth="197.0" />
+                <Label layoutX="384.0" layoutY="257.0" text="Username">
+                    <font>
+                        <Font size="10.0" />
+                    </font>
+                </Label>
+                <Label layoutX="384.0" layoutY="297.0" text="Password">
+                    <font>
+                        <Font size="10.0" />
+                    </font>
+                </Label>
+                <Button fx:id="loginButton" layoutX="533.0" layoutY="310.0" mnemonicParsing="false" onAction="#login" text="Login" />
+                <TextField fx:id="userLoginResult" layoutX="383.0" layoutY="309.0" prefHeight="27.0" prefWidth="143.0" style="-fx-background-color: #9eacba; -fx-text-fill: #dc143c;" />
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>
